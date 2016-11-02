@@ -60,17 +60,23 @@ j1App::~j1App()
 	}
 
 	modules.clear();
+	
 }
 
 void j1App::AddModule(j1Module* module)
 {
+	
+	int starttim = timer.ReadMs();
 	module->Init();
 	modules.add(module);
+	int endawaketim = timer.ReadMs();
+	LOG("Time Constructor App:%i", starttim - endawaketim);
 }
 
 // Called before render is available
 bool j1App::Awake()
 {
+	int starttim = timer.ReadMs();
 	pugi::xml_document	config_file;
 	pugi::xml_node		config;
 	pugi::xml_node		app_config;
@@ -99,7 +105,8 @@ bool j1App::Awake()
 			item = item->next;
 		}
 	}
-
+	int endawaketim = timer.ReadMs();
+	LOG("Time Awake App:%i", endawaketim-starttim);
 	return ret;
 }
 
@@ -115,6 +122,7 @@ bool j1App::Start()
 		ret = item->data->Start();
 		item = item->next;
 	}
+	LOG("Time Start App:%i", timer);
 	return ret;
 }
 
@@ -270,6 +278,7 @@ bool j1App::CleanUp()
 		ret = item->data->CleanUp();
 		item = item->prev;
 	}
+	LOG("Time CleanUp App:%i", timer);
 	return ret;
 }
 
