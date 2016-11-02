@@ -19,14 +19,14 @@ j1PerfTimer::j1PerfTimer()
 // ---------------------------------------------
 void j1PerfTimer::Start()
 {
-	started_at = SDL_GetPerformanceCounter();
 	frequency = SDL_GetPerformanceFrequency();
+	started_at = SDL_GetPerformanceCounter();
 }
 
 // ---------------------------------------------
 double j1PerfTimer::ReadMs() const
 {
-	return started_at;
+	return (SDL_GetPerformanceCounter() * 1000) / frequency;
 }
 
 // ---------------------------------------------
