@@ -1,0 +1,11 @@
+﻿  j1Scene.cpp
+c:\users\nicolasba1\desktop\desarrollogithub\dev_class10_handout\motor2d\j1scene.cpp(90): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+c:\users\nicolasba1\desktop\desarrollogithub\dev_class10_handout\motor2d\j1scene.cpp(93): warning C4244: '-=': conversion from 'double' to 'int', possible loss of data
+c:\users\nicolasba1\desktop\desarrollogithub\dev_class10_handout\motor2d\j1scene.cpp(96): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+c:\users\nicolasba1\desktop\desarrollogithub\dev_class10_handout\motor2d\j1scene.cpp(99): warning C4244: '-=': conversion from 'double' to 'int', possible loss of data
+c:\users\nicolasba1\desktop\desarrollogithub\dev_class10_handout\motor2d\j1scene.cpp(102): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+c:\users\nicolasba1\desktop\desarrollogithub\dev_class10_handout\motor2d\j1scene.cpp(105): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+c:\users\nicolasba1\desktop\desarrollogithub\dev_class10_handout\motor2d\j1scene.cpp(108): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
+c:\users\nicolasba1\desktop\desarrollogithub\dev_class10_handout\motor2d\j1scene.cpp(111): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
+  Motor2D.vcxproj -> C:\Users\nicolasba1\Desktop\DesarrolloGithub\Dev_class10_handout\Debug\Development - Class 10.exe
+  Motor2D.vcxproj -> C:\Users\nicolasba1\Desktop\DesarrolloGithub\Dev_class10_handout\Debug\Development - Class 10.pdb (Full PDB)
