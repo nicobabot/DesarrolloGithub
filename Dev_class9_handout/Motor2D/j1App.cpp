@@ -176,12 +176,14 @@ pugi::xml_node j1App::LoadConfig(pugi::xml_document& config_file) const
 void j1App::PrepareUpdate()
 {
 	timer.Start();
-	
+	framesls++;
+	frame_count++;
 }
 
 // ---------------------------------------------
 void j1App::FinishUpdate()
 {
+	
 	if(want_to_save == true)
 		SavegameNow();
 
@@ -197,10 +199,15 @@ void j1App::FinishUpdate()
 
 	float avg_fps = frame_count/ frametimer.ReadSec();
 	float seconds_since_startup = frametimer.ReadSec();
-	float dt = 0.0f;
-	uint32 last_frame_ms = timer.ReadMs();
-	uint32 frames_on_last_update = 0;
+	float dt = frametimer.ReadSec()/1000;
+	uint32 last_frame_ms = timer.ReadMs();//update 
 	
+	if (frametimerls.ReadMs() > 1000) {
+		frametimerls.Start();
+		finalframes = framesls;
+		framesls = 0;
+	}
+	uint32 frames_on_last_update = finalframes;
 
 	static char title[256];
 	sprintf_s(title, 256, "Av.FPS: %.2f Last Frame Ms: %u Last sec frames: %i Last dt: %.3f Time since startup: %.3f Frame Count: %lu ",
@@ -249,7 +256,7 @@ bool j1App::DoUpdate()
 
 		ret = item->data->Update();
 	}
-	frame_count++;
+	
 
 	return ret;
 }

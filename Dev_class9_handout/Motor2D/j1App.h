@@ -107,6 +107,9 @@ private:
 
 	j1PerfTimer  timer;
 	j1Timer frametimer;
+	j1PerfTimer frametimerls;
+	int framesls;
+	int finalframes;
 };
 
 extern j1App* App; // No student is asking me about that ... odd :-S

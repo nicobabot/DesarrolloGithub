@@ -1,11 +1,11 @@
 ﻿  j1App.cpp
-c:\users\nico\desktop\2ndo vj\desarrollo de videojuegos\desarrollogithub\dev_class9_handout\motor2d\j1app.cpp(49): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-c:\users\nico\desktop\2ndo vj\desarrollo de videojuegos\desarrollogithub\dev_class9_handout\motor2d\j1app.cpp(112): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-c:\users\nico\desktop\2ndo vj\desarrollo de videojuegos\desarrollogithub\dev_class9_handout\motor2d\j1app.cpp(130): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-c:\users\nico\desktop\2ndo vj\desarrollo de videojuegos\desarrollogithub\dev_class9_handout\motor2d\j1app.cpp(201): warning C4244: 'initializing': conversion from 'double' to 'uint32', possible loss of data
-c:\users\nico\desktop\2ndo vj\desarrollo de videojuegos\desarrollogithub\dev_class9_handout\motor2d\j1app.cpp(206): warning C4477: 'sprintf_s' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 6 has type 'uint64'
-  c:\users\nico\desktop\2ndo vj\desarrollo de videojuegos\desarrollogithub\dev_class9_handout\motor2d\j1app.cpp(206): note: consider using '%llu' in the format string
-  c:\users\nico\desktop\2ndo vj\desarrollo de videojuegos\desarrollogithub\dev_class9_handout\motor2d\j1app.cpp(206): note: consider using '%I64u' in the format string
-c:\users\nico\desktop\2ndo vj\desarrollo de videojuegos\desarrollogithub\dev_class9_handout\motor2d\j1app.cpp(292): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-  Motor2D.vcxproj -> C:\Users\nico\Desktop\2ndo VJ\DESARROLLO DE VIDEOJUEGOS\DesarrolloGithub\Dev_class9_handout\Debug\Development - Class 9 Handout.exe
-  Motor2D.vcxproj -> C:\Users\nico\Desktop\2ndo VJ\DESARROLLO DE VIDEOJUEGOS\DesarrolloGithub\Dev_class9_handout\Debug\Development - Class 9 Handout.pdb (Full PDB)
+c:\users\nicolasba1\desktop\desarrollogithub\dev_class9_handout\motor2d\j1app.cpp(49): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\nicolasba1\desktop\desarrollogithub\dev_class9_handout\motor2d\j1app.cpp(112): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\nicolasba1\desktop\desarrollogithub\dev_class9_handout\motor2d\j1app.cpp(130): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\nicolasba1\desktop\desarrollogithub\dev_class9_handout\motor2d\j1app.cpp(203): warning C4244: 'initializing': conversion from 'double' to 'uint32', possible loss of data
+c:\users\nicolasba1\desktop\desarrollogithub\dev_class9_handout\motor2d\j1app.cpp(213): warning C4477: 'sprintf_s' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 6 has type 'uint64'
+  c:\users\nicolasba1\desktop\desarrollogithub\dev_class9_handout\motor2d\j1app.cpp(213): note: consider using '%llu' in the format string
+  c:\users\nicolasba1\desktop\desarrollogithub\dev_class9_handout\motor2d\j1app.cpp(213): note: consider using '%I64u' in the format string
+c:\users\nicolasba1\desktop\desarrollogithub\dev_class9_handout\motor2d\j1app.cpp(299): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  Motor2D.vcxproj -> C:\Users\nicolasba1\Desktop\DesarrolloGithub\Dev_class9_handout\Debug\Development - Class 9 Handout.exe
+  Motor2D.vcxproj -> C:\Users\nicolasba1\Desktop\DesarrolloGithub\Dev_class9_handout\Debug\Development - Class 9 Handout.pdb (Full PDB)
