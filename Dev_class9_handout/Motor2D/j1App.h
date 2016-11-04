@@ -90,7 +90,7 @@ public:
 	j1FileSystem*		fs = NULL;
 	j1Map*				map = NULL;
 	j1PathFinding*		pathfinding = NULL;
-
+	uint64 frame_count = 0;
 private:
 
 	p2List<j1Module*>	modules;
@@ -106,6 +106,7 @@ private:
 	mutable p2SString	save_game;
 
 	j1PerfTimer  timer;
+	j1Timer frametimer;
 };
 
 extern j1App* App; // No student is asking me about that ... odd :-S

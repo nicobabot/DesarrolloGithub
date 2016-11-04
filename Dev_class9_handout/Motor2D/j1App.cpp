@@ -175,6 +175,8 @@ pugi::xml_node j1App::LoadConfig(pugi::xml_document& config_file) const
 // ---------------------------------------------
 void j1App::PrepareUpdate()
 {
+	timer.Start();
+	
 }
 
 // ---------------------------------------------
@@ -193,12 +195,12 @@ void j1App::FinishUpdate()
 	// Amount of ms took the last update
 	// Amount of frames during the last second
 
-	float avg_fps = 0.0f;
-	float seconds_since_startup = timer.ReadMs();
+	float avg_fps = frame_count/ frametimer.ReadSec();
+	float seconds_since_startup = frametimer.ReadSec();
 	float dt = 0.0f;
-	uint32 last_frame_ms = 0;
+	uint32 last_frame_ms = timer.ReadMs();
 	uint32 frames_on_last_update = 0;
-	uint64 frame_count = 0;
+	
 
 	static char title[256];
 	sprintf_s(title, 256, "Av.FPS: %.2f Last Frame Ms: %u Last sec frames: %i Last dt: %.3f Time since startup: %.3f Frame Count: %lu ",
@@ -247,6 +249,7 @@ bool j1App::DoUpdate()
 
 		ret = item->data->Update();
 	}
+	frame_count++;
 
 	return ret;
 }
