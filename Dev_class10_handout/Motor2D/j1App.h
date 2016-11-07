@@ -17,6 +17,7 @@ class j1FileSystem;
 class j1Scene;
 class j1Map;
 class j1PathFinding;
+class j1Player;
 
 class j1App
 {
@@ -36,7 +37,7 @@ public:
 
 	// Called each loop iteration
 	bool Update();
-
+	
 	// Called before quitting
 	bool CleanUp();
 
@@ -72,7 +73,7 @@ private:
 
 	// Call modules after each loop iteration
 	bool PostUpdate();
-
+	bool UpdateTick(float dt);
 	// Load / Save
 	bool LoadGameNow();
 	bool SavegameNow() const;
@@ -89,7 +90,8 @@ public:
 	j1FileSystem*		fs = NULL;
 	j1Map*				map = NULL;
 	j1PathFinding*		pathfinding = NULL;
-
+	j1Player*			player = NULL;
+	j1PerfTimer Playertimer;
 private:
 
 	p2List<j1Module*>	modules;
@@ -98,7 +100,7 @@ private:
 
 	p2SString			title;
 	p2SString			organization;
-	int			framerate;
+	uint64			framerate;
 	mutable bool		want_to_save = false;
 	bool				want_to_load = false;
 	p2SString			load_game;

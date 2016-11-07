@@ -1,11 +1,23 @@
-﻿  j1Scene.cpp
-c:\users\nicolasba1\desktop\desarrollogithub\dev_class10_handout\motor2d\j1scene.cpp(90): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-c:\users\nicolasba1\desktop\desarrollogithub\dev_class10_handout\motor2d\j1scene.cpp(93): warning C4244: '-=': conversion from 'double' to 'int', possible loss of data
-c:\users\nicolasba1\desktop\desarrollogithub\dev_class10_handout\motor2d\j1scene.cpp(96): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-c:\users\nicolasba1\desktop\desarrollogithub\dev_class10_handout\motor2d\j1scene.cpp(99): warning C4244: '-=': conversion from 'double' to 'int', possible loss of data
-c:\users\nicolasba1\desktop\desarrollogithub\dev_class10_handout\motor2d\j1scene.cpp(102): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
-c:\users\nicolasba1\desktop\desarrollogithub\dev_class10_handout\motor2d\j1scene.cpp(105): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
-c:\users\nicolasba1\desktop\desarrollogithub\dev_class10_handout\motor2d\j1scene.cpp(108): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
-c:\users\nicolasba1\desktop\desarrollogithub\dev_class10_handout\motor2d\j1scene.cpp(111): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
-  Motor2D.vcxproj -> C:\Users\nicolasba1\Desktop\DesarrolloGithub\Dev_class10_handout\Debug\Development - Class 10.exe
-  Motor2D.vcxproj -> C:\Users\nicolasba1\Desktop\DesarrolloGithub\Dev_class10_handout\Debug\Development - Class 10.pdb (Full PDB)
+﻿  j1Player.cpp
+  Generating Code...
+  Compiling...
+  j1Render.cpp
+  j1Main.cpp
+  j1Input.cpp
+  j1App.cpp
+c:\users\nico\desktop\2ndo vj\desarrollo de videojuegos\desarrollogithub\dev_class10_handout\motor2d\j1app.cpp(217): warning C4244: 'argument': conversion from 'float' to 'Uint32', possible loss of data
+c:\users\nico\desktop\2ndo vj\desarrollo de videojuegos\desarrollogithub\dev_class10_handout\motor2d\j1app.cpp(218): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\nico\desktop\2ndo vj\desarrollo de videojuegos\desarrollogithub\dev_class10_handout\motor2d\j1app.cpp(211): warning C4477: 'sprintf_s' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 6 has type 'uint64'
+  c:\users\nico\desktop\2ndo vj\desarrollo de videojuegos\desarrollogithub\dev_class10_handout\motor2d\j1app.cpp(211): note: consider using '%llu' in the format string
+  c:\users\nico\desktop\2ndo vj\desarrollo de videojuegos\desarrollogithub\dev_class10_handout\motor2d\j1app.cpp(211): note: consider using '%I64u' in the format string
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  j1Window.cpp
+  j1Textures.cpp
+  j1Scene.cpp
+  j1Pathfinding.cpp
+  j1Map.cpp
+  j1FileSystem.cpp
+  j1Audio.cpp
+  Motor2D.vcxproj -> C:\Users\nico\Desktop\2ndo VJ\DESARROLLO DE VIDEOJUEGOS\DesarrolloGithub\Dev_class10_handout\Debug\Development - Class 10.exe
+  Motor2D.vcxproj -> C:\Users\nico\Desktop\2ndo VJ\DESARROLLO DE VIDEOJUEGOS\DesarrolloGithub\Dev_class10_handout\Debug\Development - Class 10.pdb (Full PDB)
