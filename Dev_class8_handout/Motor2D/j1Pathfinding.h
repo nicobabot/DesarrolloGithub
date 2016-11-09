@@ -7,7 +7,8 @@
 
 #define DEFAULT_PATH_LENGTH 50
 #define INVALID_WALK_CODE 255
-
+struct PathList;
+struct PathNode;
 // --------------------------------------------------
 // Recommended reading:
 // Intro: http://www.raywenderlich.com/4946/introduction-to-a-pathfinding
@@ -43,7 +44,8 @@ public:
 
 	// Utility: return the walkability value of a tile
 	uchar GetTileAt(const iPoint& pos) const;
-
+	p2List_item<PathNode>* Newnodeteleport(p2List_item<PathNode>* activenode, PathList &listclose);
+	void OnTeleport(PathList &listclose, PathList &listopen, iPoint destiny);
 private:
 
 	// size of the map
@@ -56,7 +58,7 @@ private:
 };
 
 // forward declaration
-struct PathList;
+
 
 // ---------------------------------------------------------------------
 // Pathnode: Helper struct to represent a node in the path creation

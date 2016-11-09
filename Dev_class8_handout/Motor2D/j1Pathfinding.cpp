@@ -207,6 +207,10 @@ int j1PathFinding::CreatePath(const iPoint& origin, const iPoint& destination)
 		p2List_item<PathNode>*activeNode;
 		activeNode = close.list.add(open.GetNodeLowestScore()->data);
 		open.list.del(open.GetNodeLowestScore());
+		if (activeNode->data.pos == iPoint(5,5)) {
+			activeNode = Newnodeteleport(activeNode, close);
+			
+		}
 		// TODO 4: If we just added the destination, we are done!
 		// Backtrack to create the final path
 		// Use the Pathnode::parent and Flip() the path when you are finish
@@ -217,12 +221,14 @@ int j1PathFinding::CreatePath(const iPoint& origin, const iPoint& destination)
 				last_path.PushBack(item.pos);
 				item = *item.parent;
 			}
+			last_path.PushBack(origin);
 			last_path.Flip();
 			return 1;
 		}
 		// TODO 5: Fill a list of all adjancent nodes
 		PathList pathtemp;
 		activeNode->data.FindWalkableAdjacents(pathtemp);
+		
 		// TODO 6: Iterate adjancent nodes:
 		// ignore nodes in the closed list
 		// If it is NOT found, calculate its F and add it to the open list
@@ -231,6 +237,10 @@ int j1PathFinding::CreatePath(const iPoint& origin, const iPoint& destination)
 		for (p2List_item<PathNode> *neitemp = pathtemp.list.start; neitemp != nullptr; neitemp = neitemp->next) {
 			if (close.Find(neitemp->data.pos) == NULL) {
 				neitemp->data.CalculateF(destination);
+				if (neitemp->data.pos == iPoint(5,5)) {
+					neitemp->data.h = (iPoint(7, 8).DistanceManhattan(destination));
+				}
+				
 				if (p2List_item<PathNode> *otherneitemp = open.Find(neitemp->data.pos)) {
 					if (neitemp->data.g < otherneitemp->data.g) {
 						otherneitemp->data.parent = neitemp->data.parent;
@@ -242,7 +252,32 @@ int j1PathFinding::CreatePath(const iPoint& origin, const iPoint& destination)
 			
 			}
 		}
+		//OnTeleport(close, open, destination);
 	}
+
 	return 1;
 }
 
+void j1PathFinding::OnTeleport(PathList &listclose, PathList &listopen, iPoint destiny) {
+	iPoint TeleportA;
+	TeleportA.x = 7;
+	TeleportA.y = 8;
+	p2List_item<PathNode> *temp = listopen.list.start;
+
+	/*while (temp!=nullptr) {
+		if (temp->data.pos == iPoint(5, 5)) {
+			listopen.list.add(PathNode(listclose.list.end->data.g, TeleportA.DistanceManhattan(destiny), TeleportA, &listclose.list.end->data));
+		}
+		temp = temp->next;
+	}*/
+
+
+}
+
+p2List_item<PathNode>* j1PathFinding::Newnodeteleport(p2List_item<PathNode>* activenode, PathList &listclose) {
+	iPoint TeleportA;
+	TeleportA.x = 7;
+	TeleportA.y = 8;
+	return listclose.list.add(PathNode(listclose.list.end->data.g, activenode->data.h, TeleportA, &listclose.list.end->data));
+
+}
